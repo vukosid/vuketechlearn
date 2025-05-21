@@ -1,23 +1,15 @@
 import GradeDisplay from "@/components/body/gradeDisplay"
 
 export default function Body(){
+    var grades = [
+        {name:'grade1', descrption:'this is grade 1'},
+        {name:'grade2', descrption:'this is grade 2'},
+        {name:'grade3', descrption:'this is grade 3'},
+        {name:'grade4', descrption:'this is grade 4'}
+    ]
     return(
         <div className="grid grid-cols-4 gap-4">
-          <GradeDisplay 
-                name="Grade 1" 
-                description="This grade 1 good for start"
-            />
-          <GradeDisplay  
-                name ="grade 2" 
-                description="this is grade 2"
-            />
-          <GradeDisplay name ="grade 3"  description="this is grade 2"/>
-          <GradeDisplay name ="grade 4"  description="this is grade 2"/>
-          <GradeDisplay name ="grade 5"  description="this is grade 2"/>
-          <GradeDisplay name ="grade 6"  description="this is grade 2"/>
-          <GradeDisplay  name ="grade 7"  description="this is grade 2"/>
-          <GradeDisplay name ="grade 8"  description="this is grade 2"/>
-          <GradeDisplay name="grade 9"  description="this is grade 2"/>
+        {grades.map((item)=><GradeDisplay name={item.name}  description={item.descrption}/>)}
         </div>
     )
 }
